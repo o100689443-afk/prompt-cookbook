@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>考前重點抽認卡｜Prompt 食譜本</title>
+  <meta name="description" content="把講義或筆記丟進去，變成一問一答的抽認卡，考前快速自我測驗。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="../index.html">Prompt <span>食譜本</span></a>
+      <nav>
+        <a href="../index.html#recipes">所有食譜</a>
+        <a href="../CLAUDE.md">專案規則</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap narrow">
+    <!-- 區塊 0：頁首 -->
+    <div class="crumbs"><a href="../index.html">首頁</a> › 學習</div>
+    <section class="recipe-head">
+      <div class="meta">
+        <span data-category="學習">學習</span>
+        <span>簡單</span><span>·</span><span>3 分鐘</span>
+      </div>
+      <h1>考前重點抽認卡</h1>
+      <p class="lead">把講義或筆記丟進去，變成一問一答的抽認卡，考前快速自我測驗。</p>
+    </section>
+
+    <!-- 區塊 1：食材（3～6 項） -->
+    <section class="section" id="ingredients">
+      <h2><span class="num">1</span>食材：先準備好這些</h2>
+      <ul>
+        <li><strong>科目與範圍</strong>：例如「普通心理學第 3～4 章」</li>
+        <li><strong>講義或筆記內容</strong>：直接貼文字</li>
+        <li><strong>考試題型</strong>：選擇、申論、名詞解釋</li>
+        <li><strong>想要的張數</strong>：建議 10～20 張</li>
+      </ul>
+    </section>
+
+    <!-- 區塊 2：食譜（Prompt，6～20 行，【】標示要填的地方） -->
+    <section class="section" id="prompt">
+      <h2><span class="num">2</span>食譜：複製這段 Prompt</h2>
+<pre class="prompt">你是一位會出考題的大學助教。
+我正在準備【科目與範圍】的考試，考試題型是【題型】。
+以下是我的講義內容：
+【貼上講義或筆記】
+
+請根據內容做出【張數】張抽認卡，規則：
+- 只用我提供的內容出題，不要加入講義沒有的知識
+- 每張格式為「Q：問題」換行「A：答案（30 字以內）」
+- 問題要混合：名詞定義、比較兩個概念、舉例應用
+- 最後列出 3 個「最容易搞混的觀念」並各用一句話區分</pre>
+      <p class="hint">紅色【】的地方換成你自己的內容，括號也一起刪掉。</p>
+    </section>
+
+    <!-- 區塊 3：步驟（3～5 步，動詞開頭） -->
+    <section class="section" id="steps">
+      <h2><span class="num">3</span>步驟</h2>
+      <ol>
+        <li>把講義複製成純文字，太長就一章一章做。</li>
+        <li>送出 Prompt，先只看 Q 不看 A，自己試著回答。</li>
+        <li>答錯的卡片複製下來，回覆「針對這幾題再出 5 張變化題」。</li>
+        <li>考前一天只複習答錯過的卡片。</li>
+      </ol>
+    </section>
+
+    <!-- 區塊 4：成品示範（虛構例子） -->
+    <section class="section" id="example">
+      <h2><span class="num">4</span>成品示範</h2>
+      <div class="examples">
+        <div class="example-box">
+          <h3>我輸入的</h3>
+          <pre>科目與範圍：普通心理學 第 5 章 學習
+題型：選擇題 + 名詞解釋
+張數：5
+
+講義：古典制約由巴夫洛夫提出，中性刺激與非制約刺激配對後，能引發制約反應。操作制約由史金納提出，行為後果會影響行為再次出現的機率。正增強是給予喜歡的刺激，負增強是移除厭惡的刺激，兩者都會增加行為……</pre>
+        </div>
+        <div class="example-box ai">
+          <h3>AI 大概會回</h3>
+          <pre>Q：古典制約是由誰提出的？
+A：巴夫洛夫。
+
+Q：負增強會增加還是減少行為出現？
+A：增加，因為移除了厭惡刺激。
+
+Q：古典制約和操作制約最大的差別？
+A：前者是刺激配對，後者是行為後果影響行為。
+
+……
+
+最容易搞混的觀念：
+1. 負增強 vs 懲罰：負增強讓行為增加，懲罰讓行為減少。</pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- 區塊 5：小撇步（2～4 項，至少一項常見錯誤） -->
+    <section class="section" id="tips">
+      <h2><span class="num">5</span>小撇步</h2>
+      <ul>
+        <li><strong>限定只用你的講義</strong>：加上「不要加入講義沒有的知識」，避免 AI 出超出範圍或錯誤的題目。</li>
+        <li><strong>搭配主動回想</strong>：先遮住答案自己想，比直接讀答案記得更牢。</li>
+        <li><strong>常見錯誤</strong>：一次貼整本講義，結果卡片太籠統。每次一章、一個主題效果最好。</li>
+      </ul>
+    </section>
+
+    <a class="back" href="../index.html#recipes">← 回到所有食譜</a>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">Prompt 食譜本 · 範本適用 ChatGPT、Claude、Gemini 等各種 AI 對話工具</div>
+  </footer>
+
+  <script src="../assets/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prompt 食譜本</title>
+  <meta name="description" content="給大學生的提示詞範本食譜：準備好食材、照著步驟，就能讓 AI 幫你做出好成品。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html">Prompt <span>食譜本</span></a>
+      <nav>
+        <a href="#recipes">所有食譜</a>
+        <a href="CLAUDE.md">專案規則</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="eyebrow">PROMPT COOKBOOK</div>
+      <h1>好的提示詞，<br>就像一份照著做不會失敗的食譜。</h1>
+      <p>每一道食譜都告訴你：要先準備什麼資訊、直接複製的 Prompt 範本、使用步驟、實際成品長什麼樣子，還有讓結果更好的小撇步。</p>
+      <div class="legend">
+        <div><b>食材</b><span>先準備好的資訊</span></div>
+        <div><b>食譜</b><span>可複製的 Prompt</span></div>
+        <div><b>步驟</b><span>怎麼跟 AI 來回</span></div>
+        <div><b>成品</b><span>實際示範</span></div>
+        <div><b>撇步</b><span>技巧與常見錯誤</span></div>
+      </div>
+    </section>
+
+    <section id="recipes">
+      <div class="toolbar">
+        <input id="search" class="search" type="search" placeholder="搜尋食譜，例如：報告、Email、考試" aria-label="搜尋食譜">
+        <div id="chips" class="chips" role="group" aria-label="分類篩選"></div>
+      </div>
+      <p id="count" class="meta"></p>
+      <div id="recipe-grid" class="grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">Prompt 食譜本 · 範本適用 ChatGPT、Claude、Gemini 等各種 AI 對話工具</div>
+  </footer>
+
+  <script src="assets/recipes.js"></script>
+  <script src="assets/main.js"></script>
+</body>
+</html>

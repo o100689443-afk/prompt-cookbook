@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>正式信件潤稿｜Prompt 食譜本</title>
+  <meta name="description" content="把口語草稿改成寄給教授或主管也不失禮的正式信件。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="../index.html">Prompt <span>食譜本</span></a>
+      <nav>
+        <a href="../index.html#recipes">所有食譜</a>
+        <a href="../CLAUDE.md">專案規則</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap narrow">
+    <!-- 區塊 0：頁首 -->
+    <div class="crumbs"><a href="../index.html">首頁</a> › 寫作</div>
+    <section class="recipe-head">
+      <div class="meta">
+        <span data-category="寫作">寫作</span>
+        <span>簡單</span><span>·</span><span>2 分鐘</span>
+      </div>
+      <h1>正式信件潤稿</h1>
+      <p class="lead">把口語草稿改成寄給教授或主管也不失禮的正式信件。</p>
+    </section>
+
+    <!-- 區塊 1：食材（3～6 項） -->
+    <section class="section" id="ingredients">
+      <h2><span class="num">1</span>食材：先準備好這些</h2>
+      <ul>
+        <li><strong>收件人身分</strong>：教授、主管、公司窗口等</li>
+        <li><strong>你的草稿</strong>：口語、條列甚至錯字都可以</li>
+        <li><strong>寄信目的</strong>：請假、詢問、道歉、請求協助</li>
+        <li><strong>需要附上的資訊</strong>：學號、課程名稱、日期等</li>
+      </ul>
+    </section>
+
+    <!-- 區塊 2：食譜（Prompt，6～20 行，【】標示要填的地方） -->
+    <section class="section" id="prompt">
+      <h2><span class="num">2</span>食譜：複製這段 Prompt</h2>
+<pre class="prompt">你是一位擅長商業與學術書信的寫作顧問。
+請把我的草稿改寫成一封寄給【收件人身分】的正式 Email。
+寄信目的是【寄信目的】。
+信中必須包含這些資訊：【學號、課程、日期等必要資訊】。
+
+我的草稿：
+【貼上你的草稿】
+
+要求：
+- 語氣禮貌但不卑微，不要過度客套
+- 先給一行「主旨」，再給信件內文
+- 內文 150 字以內，分成 3～4 段
+- 最後用條列告訴我你改了哪些地方</pre>
+      <p class="hint">紅色【】的地方換成你自己的內容，括號也一起刪掉。</p>
+    </section>
+
+    <!-- 區塊 3：步驟（3～5 步，動詞開頭） -->
+    <section class="section" id="steps">
+      <h2><span class="num">3</span>步驟</h2>
+      <ol>
+        <li>把想說的話直接打成草稿，不用在意語氣。</li>
+        <li>填好 Prompt 送出，檢查主旨是否一眼就看得出目的。</li>
+        <li>核對學號、日期、課程名稱等資訊是否正確。</li>
+        <li>覺得太正式或太生硬，就回覆「語氣再輕鬆一點」微調。</li>
+      </ol>
+    </section>
+
+    <!-- 區塊 4：成品示範（虛構例子） -->
+    <section class="section" id="example">
+      <h2><span class="num">4</span>成品示範</h2>
+      <div class="examples">
+        <div class="example-box">
+          <h3>我輸入的</h3>
+          <pre>收件人：通識課陳老師
+目的：請假
+必要資訊：學號 B11200000、通識課「海洋與生活」、11 月 18 日
+
+草稿：老師我 18 號要去參加系上的比賽沒辦法去上課，可以請假嗎 作業我會照常交</pre>
+        </div>
+        <div class="example-box ai">
+          <h3>AI 大概會回</h3>
+          <pre>主旨：【請假】海洋與生活／B11200000／11 月 18 日
+
+陳老師您好：
+
+我是修習「海洋與生活」的學生，學號 B11200000。
+
+因 11 月 18 日需代表系上參加比賽，當天無法到課，特此來信請假，如需證明文件我可以再補上。
+
+當週作業我會依原定時間繳交，缺課的內容也會向同學借筆記補上。
+
+謝謝老師撥冗閱讀。
+
+學生 ○○○ 敬上
+
+修改說明：加入主旨格式、補上請假證明的說明、把結尾改為正式落款。</pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- 區塊 5：小撇步（2～4 項，至少一項常見錯誤） -->
+    <section class="section" id="tips">
+      <h2><span class="num">5</span>小撇步</h2>
+      <ul>
+        <li><strong>主旨寫清楚</strong>：用「【目的】課程／學號／日期」的格式，老師在一堆信中也能馬上找到。</li>
+        <li><strong>提前寄出</strong>：請假信最好在事前寄，AI 潤得再好也救不了事後補請。</li>
+        <li><strong>常見錯誤</strong>：忘記把 AI 範例裡的「○○○」換成自己的名字就直接寄出，寄之前一定要從頭讀一遍。</li>
+      </ul>
+    </section>
+
+    <a class="back" href="../index.html#recipes">← 回到所有食譜</a>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">Prompt 食譜本 · 範本適用 ChatGPT、Claude、Gemini 等各種 AI 對話工具</div>
+  </footer>
+
+  <script src="../assets/main.js"></script>
+</body>
+</html>

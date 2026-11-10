@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>期末報告大綱產生器｜Prompt 食譜本</title>
+  <meta name="description" content="從一個模糊的題目出發，生出有研究問題、章節與資料方向的報告大綱。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="../index.html">Prompt <span>食譜本</span></a>
+      <nav>
+        <a href="../index.html#recipes">所有食譜</a>
+        <a href="../CLAUDE.md">專案規則</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap narrow">
+    <!-- 區塊 0：頁首 -->
+    <div class="crumbs"><a href="../index.html">首頁</a> › 寫作</div>
+    <section class="recipe-head">
+      <div class="meta">
+        <span data-category="寫作">寫作</span>
+        <span>中等</span><span>·</span><span>10 分鐘</span>
+      </div>
+      <h1>期末報告大綱產生器</h1>
+      <p class="lead">從一個模糊的題目出發，生出有研究問題、章節與資料方向的報告大綱。</p>
+    </section>
+
+    <!-- 區塊 1：食材（3～6 項） -->
+    <section class="section" id="ingredients">
+      <h2><span class="num">1</span>食材：先準備好這些</h2>
+      <ul>
+        <li><strong>課程名稱</strong>：讓 AI 知道報告的學科範圍</li>
+        <li><strong>題目或關鍵字</strong>：就算還很模糊也沒關係</li>
+        <li><strong>報告規格</strong>：字數、頁數或報告時間</li>
+        <li><strong>老師的要求</strong>：評分重點、必須包含的部分</li>
+        <li><strong>你的興趣角度</strong>：你比較想從哪個方向切入</li>
+      </ul>
+    </section>
+
+    <!-- 區塊 2：食譜（Prompt，6～20 行，【】標示要填的地方） -->
+    <section class="section" id="prompt">
+      <h2><span class="num">2</span>食譜：複製這段 Prompt</h2>
+<pre class="prompt">你是一位擅長指導大學生寫報告的助教。
+我要寫一份【課程名稱】的期末報告，題目方向是【題目或關鍵字】。
+報告規格是【字數或頁數】，老師特別要求【評分重點或必備內容】。
+我比較有興趣的角度是【你想切入的方向】。
+
+請幫我：
+1. 提出 3 個可以研究的具體問題，各用一句話說明為什麼值得研究
+2. 選出你最推薦的一個，並說明理由
+3. 為推薦的題目列出報告大綱（含章節標題與每章重點，章節 4～6 個）
+4. 每個章節建議可以找哪一類資料（例如：政府統計、期刊論文、新聞案例）
+
+請用條列格式回答，總長度不超過 600 字。</pre>
+      <p class="hint">紅色【】的地方換成你自己的內容，括號也一起刪掉。</p>
+    </section>
+
+    <!-- 區塊 3：步驟（3～5 步，動詞開頭） -->
+    <section class="section" id="steps">
+      <h2><span class="num">3</span>步驟</h2>
+      <ol>
+        <li>填好 Prompt 中所有【】的內容後送出。</li>
+        <li>挑出最有感覺的研究問題，如果都不喜歡，就回覆「再給我 3 個更偏向【某方向】的問題」。</li>
+        <li>確定題目後，請 AI 針對其中一章再展開成段落重點。</li>
+        <li>自己到圖書館或資料庫查證 AI 建議的資料方向，不要直接引用 AI 給的文獻名稱。</li>
+      </ol>
+    </section>
+
+    <!-- 區塊 4：成品示範（虛構例子） -->
+    <section class="section" id="example">
+      <h2><span class="num">4</span>成品示範</h2>
+      <div class="examples">
+        <div class="example-box">
+          <h3>我輸入的</h3>
+          <pre>我要寫一份「環境社會學」的期末報告，題目方向是「外送平台與塑膠垃圾」。
+報告規格是 3000 字，老師特別要求要有台灣的在地案例。
+我比較有興趣的角度是消費者的習慣能不能改變。</pre>
+        </div>
+        <div class="example-box ai">
+          <h3>AI 大概會回</h3>
+          <pre>研究問題：
+1. 外送平台的「不需要餐具」選項，實際減少了多少一次性餐具？
+2. 大學生點外送時，環保因素排在選擇考量的第幾位？
+3. 循環容器外送方案在台灣推行的阻礙是什麼？
+
+推薦：第 2 題，資料可自己做小型問卷，最容易做出在地特色。
+
+大綱：
+一、前言：外送普及與一次性垃圾的增加
+二、文獻回顧：消費行為與環保態度的落差
+三、研究方法：校內問卷設計
+四、結果分析：價格、便利、環保的排序
+五、結論與建議：平台可以怎麼設計預設選項</pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- 區塊 5：小撇步（2～4 項，至少一項常見錯誤） -->
+    <section class="section" id="tips">
+      <h2><span class="num">5</span>小撇步</h2>
+      <ul>
+        <li><strong>先發散再收斂</strong>：第一輪讓 AI 給多個問題，第二輪才請它深入，比一次要完整報告好用很多。</li>
+        <li><strong>加上限制更聚焦</strong>：指定「台灣」、「近五年」、「大學生」這類限制，問題會更具體。</li>
+        <li><strong>常見錯誤</strong>：直接把 AI 列出的書名或論文抄進參考文獻。AI 可能編造不存在的文獻，一定要自己查到原文。</li>
+      </ul>
+    </section>
+
+    <a class="back" href="../index.html#recipes">← 回到所有食譜</a>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">Prompt 食譜本 · 範本適用 ChatGPT、Claude、Gemini 等各種 AI 對話工具</div>
+  </footer>
+
+  <script src="../assets/main.js"></script>
+</body>
+</html>

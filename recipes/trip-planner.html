@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小旅行行程規劃｜Prompt 食譜本</title>
+  <meta name="description" content="給它天數、預算和喜好，排出一份不趕路、有備案的行程表。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="../index.html">Prompt <span>食譜本</span></a>
+      <nav>
+        <a href="../index.html#recipes">所有食譜</a>
+        <a href="../CLAUDE.md">專案規則</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap narrow">
+    <!-- 區塊 0：頁首 -->
+    <div class="crumbs"><a href="../index.html">首頁</a> › 生活</div>
+    <section class="recipe-head">
+      <div class="meta">
+        <span data-category="生活">生活</span>
+        <span>簡單</span><span>·</span><span>5 分鐘</span>
+      </div>
+      <h1>小旅行行程規劃</h1>
+      <p class="lead">給它天數、預算和喜好，排出一份不趕路、有備案的行程表。</p>
+    </section>
+
+    <!-- 區塊 1：食材（3～6 項） -->
+    <section class="section" id="ingredients">
+      <h2><span class="num">1</span>食材：先準備好這些</h2>
+      <ul>
+        <li><strong>目的地與天數</strong>：例如「台南兩天一夜」</li>
+        <li><strong>預算</strong>：每人大約多少錢（不含或含交通要說清楚）</li>
+        <li><strong>交通方式</strong>：機車、大眾運輸、開車</li>
+        <li><strong>旅伴與喜好</strong>：美食、拍照、文青、走路多不多</li>
+        <li><strong>出發地與時間</strong>：幾點出發、幾點要回到家</li>
+      </ul>
+    </section>
+
+    <!-- 區塊 2：食譜（Prompt，6～20 行，【】標示要填的地方） -->
+    <section class="section" id="prompt">
+      <h2><span class="num">2</span>食譜：複製這段 Prompt</h2>
+<pre class="prompt">你是一位很懂台灣在地旅遊、注重行程不趕的旅遊規劃師。
+請幫我規劃【目的地與天數】的行程。
+- 出發地與時間：【出發地、出發與回程時間】
+- 交通方式：【交通方式】
+- 預算：每人約【金額】元
+- 旅伴與喜好：【旅伴與喜好】
+
+要求：
+1. 用表格呈現：時間｜地點｜要做什麼｜預估花費
+2. 每天安排 4～6 個點，相鄰兩點交通不超過 30 分鐘
+3. 每天標註一個「下雨備案」
+4. 最後列出總預算估算
+請提醒我營業時間與價格需要自行再確認。</pre>
+      <p class="hint">紅色【】的地方換成你自己的內容，括號也一起刪掉。</p>
+    </section>
+
+    <!-- 區塊 3：步驟（3～5 步，動詞開頭） -->
+    <section class="section" id="steps">
+      <h2><span class="num">3</span>步驟</h2>
+      <ol>
+        <li>把五項食材填進 Prompt 後送出。</li>
+        <li>看完表格，回覆想刪掉或想加入的地點，請 AI 重新排序。</li>
+        <li>逐一用地圖查交通時間、上官網確認營業時間。</li>
+        <li>把確定的行程貼到旅伴群組，順便分工訂票與住宿。</li>
+      </ol>
+    </section>
+
+    <!-- 區塊 4：成品示範（虛構例子） -->
+    <section class="section" id="example">
+      <h2><span class="num">4</span>成品示範</h2>
+      <div class="examples">
+        <div class="example-box">
+          <h3>我輸入的</h3>
+          <pre>目的地：台南兩天一夜
+出發：台中，週六 8:00 出發，週日 20:00 前回到台中
+交通：火車＋當地租機車
+預算：每人約 3000 元（含住宿）
+旅伴：大學同學 3 人，喜歡小吃和老街拍照，不想走太多路</pre>
+        </div>
+        <div class="example-box ai">
+          <h3>AI 大概會回</h3>
+          <pre>第一天
+時間｜地點｜要做什麼｜預估花費
+10:00｜台南火車站｜租機車｜300
+10:30｜國華街｜小吃午餐｜200
+13:00｜神農街｜老街散步拍照｜0
+15:00｜咖啡廳｜休息躲太陽｜150
+17:30｜安平老街｜看夕陽、吃晚餐｜250
+下雨備案：改去室內的文化展館
+
+……
+
+總預算估算：每人約 2,800 元
+提醒：營業時間與價格請出發前再確認。</pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- 區塊 5：小撇步（2～4 項，至少一項常見錯誤） -->
+    <section class="section" id="tips">
+      <h2><span class="num">5</span>小撇步</h2>
+      <ul>
+        <li><strong>說清楚「不要什麼」</strong>：例如「不想爬山」「不吃辣」，比只說喜歡什麼更能避開踩雷。</li>
+        <li><strong>要求交通時間上限</strong>：加上「相鄰兩點不超過 30 分鐘」，行程才不會一直在路上。</li>
+        <li><strong>常見錯誤</strong>：完全相信 AI 給的店名和營業時間。AI 可能給出已經歇業的店，一定要自己上網確認。</li>
+      </ul>
+    </section>
+
+    <a class="back" href="../index.html#recipes">← 回到所有食譜</a>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">Prompt 食譜本 · 範本適用 ChatGPT、Claude、Gemini 等各種 AI 對話工具</div>
+  </footer>
+
+  <script src="../assets/main.js"></script>
+</body>
+</html>

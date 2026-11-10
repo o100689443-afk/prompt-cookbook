@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>會議紀錄整理師｜Prompt 食譜本</title>
+  <meta name="description" content="把雜亂的會議逐字稿，整理成決議、待辦事項與負責人。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="../index.html">Prompt <span>食譜本</span></a>
+      <nav>
+        <a href="../index.html#recipes">所有食譜</a>
+        <a href="../CLAUDE.md">專案規則</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap narrow">
+    <!-- 區塊 0：頁首 -->
+    <div class="crumbs"><a href="../index.html">首頁</a> › 工作</div>
+    <section class="recipe-head">
+      <div class="meta">
+        <span data-category="工作">工作</span>
+        <span>簡單</span><span>·</span><span>3 分鐘</span>
+      </div>
+      <h1>會議紀錄整理師</h1>
+      <p class="lead">把雜亂的會議逐字稿，整理成決議、待辦事項與負責人。</p>
+    </section>
+
+    <!-- 區塊 1：食材（3～6 項） -->
+    <section class="section" id="ingredients">
+      <h2><span class="num">1</span>食材：先準備好這些</h2>
+      <ul>
+        <li><strong>會議逐字稿或筆記</strong>：錄音轉文字、手寫筆記拍照打字都可以</li>
+        <li><strong>會議主題</strong>：讓 AI 判斷什麼是重點</li>
+        <li><strong>出席成員</strong>：方便 AI 對應每件事的負責人</li>
+        <li><strong>截止日期習慣</strong>：例如「下次開會前」是哪一天</li>
+      </ul>
+    </section>
+
+    <!-- 區塊 2：食譜（Prompt，6～20 行，【】標示要填的地方） -->
+    <section class="section" id="prompt">
+      <h2><span class="num">2</span>食譜：複製這段 Prompt</h2>
+<pre class="prompt">你是一位專業的會議秘書。
+以下是一場關於【會議主題】的會議紀錄，出席成員有【成員名字】。
+下次開會時間是【日期】。
+
+會議紀錄：
+【貼上逐字稿或筆記】
+
+請整理成以下格式：
+1. 會議摘要（3 句話以內）
+2. 已做出的決議（條列）
+3. 待辦事項表格：事項｜負責人｜截止日
+4. 還沒有結論、下次要討論的問題
+
+如果某件事看不出負責人或截止日，請標記「待確認」，不要自己猜。</pre>
+      <p class="hint">紅色【】的地方換成你自己的內容，括號也一起刪掉。</p>
+    </section>
+
+    <!-- 區塊 3：步驟（3～5 步，動詞開頭） -->
+    <section class="section" id="steps">
+      <h2><span class="num">3</span>步驟</h2>
+      <ol>
+        <li>把會議錄音轉成文字，或把筆記整理成純文字。</li>
+        <li>填好 Prompt 送出，特別看「待確認」的項目。</li>
+        <li>把待辦事項表格貼到小組群組，請每個人確認自己的任務。</li>
+        <li>下次開會前，把「下次要討論的問題」當作議程。</li>
+      </ol>
+    </section>
+
+    <!-- 區塊 4：成品示範（虛構例子） -->
+    <section class="section" id="example">
+      <h2><span class="num">4</span>成品示範</h2>
+      <div class="examples">
+        <div class="example-box">
+          <h3>我輸入的</h3>
+          <pre>會議主題：行銷課分組報告第二次討論
+成員：小安、阿哲、婷婷、我（小魚）
+下次開會：11/20
+
+紀錄：小安說問卷做好了可以發 阿哲覺得題目太多 最後決定刪到 10 題 婷婷負責做簡報封面跟架構 簡報要不要用影片還沒決定 我負責整理競品資料 老師說 12/4 上台</pre>
+        </div>
+        <div class="example-box ai">
+          <h3>AI 大概會回</h3>
+          <pre>1. 會議摘要
+問卷已完成初稿，決定精簡到 10 題；簡報與競品分析已分工，12/4 上台報告。
+
+2. 決議
+- 問卷題數刪減為 10 題
+
+3. 待辦事項
+事項｜負責人｜截止日
+修改問卷為 10 題｜小安｜待確認
+簡報封面與架構｜婷婷｜11/20
+整理競品資料｜小魚｜11/20
+
+4. 下次要討論
+- 簡報中是否加入影片</pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- 區塊 5：小撇步（2～4 項，至少一項常見錯誤） -->
+    <section class="section" id="tips">
+      <h2><span class="num">5</span>小撇步</h2>
+      <ul>
+        <li><strong>要求「不要猜」</strong>：加上「看不出來就標待確認」，可以避免 AI 自己編出負責人。</li>
+        <li><strong>一次貼完整</strong>：逐字稿太長時可以分段，但要先告訴 AI「我會分 3 段貼，貼完再整理」。</li>
+        <li><strong>常見錯誤</strong>：沒有提供出席成員名單，AI 會把「他說」「我覺得」對應錯人。</li>
+      </ul>
+    </section>
+
+    <a class="back" href="../index.html#recipes">← 回到所有食譜</a>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">Prompt 食譜本 · 範本適用 ChatGPT、Claude、Gemini 等各種 AI 對話工具</div>
+  </footer>
+
+  <script src="../assets/main.js"></script>
+</body>
+</html>
